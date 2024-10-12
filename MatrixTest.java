@@ -117,7 +117,7 @@ public class MatrixTest {
     private static void testMatrixTranspose() {
         Integer[][] array = { { 1, 2, 3 }, { 4, 5, 6 } };
         Matrix<Integer> m = new Matrix<>(array);
-        Matrix<Integer> transposed = Matrix.transpose(m);
+        Matrix<Integer> transposed = Matrix.transposition(m);
 
         assert transposed.rowCount() == 3 : "Transposed matrix should have 3 rows.";
         assert transposed.columnCount() == 2 : "Transposed matrix should have 2 columns.";
