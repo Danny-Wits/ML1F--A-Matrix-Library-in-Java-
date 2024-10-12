@@ -1,5 +1,4 @@
 import java.lang.reflect.Array;
-import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -16,7 +15,7 @@ import java.util.function.Function;
  * @author Danny-Wits
  */
 @SuppressWarnings("unchecked")
-class Matrix<N extends Number> implements java.io.Serializable, Cloneable {
+public class Matrix<N extends Number> implements java.io.Serializable, Cloneable {
     // !FIELDS
     // Wrapped 2D array representing the matrix.
     private N[][] array = null;
@@ -280,7 +279,7 @@ class Matrix<N extends Number> implements java.io.Serializable, Cloneable {
      * @return A new {@link Matrix} object that contains the transpose of the input
      *         matrix.
      */
-    public static <T extends Number> Matrix<T> transpose(Matrix<T> m) {
+    public static <T extends Number> Matrix<T> transposition(Matrix<T> m) {
         Matrix<T> TransposeMatrix = new Matrix<>();
         for (int i = 0; i < m.columnCount(); i++) {
             TransposeMatrix.addRow(m.getColumn(i));
@@ -465,7 +464,7 @@ class Matrix<N extends Number> implements java.io.Serializable, Cloneable {
      * @return The updated current {@link Matrix} instance containing the transpose.
      */
     public Matrix<N> transpose() {
-        this.array = transpose(this).getArray();
+        this.array = transposition(this).getArray();
         return this;
     }
 
