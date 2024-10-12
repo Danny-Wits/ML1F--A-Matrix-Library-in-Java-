@@ -5,7 +5,8 @@
 > 1.  Contained in One File
 >
 > 2.  No external dependency
-
+## Installation 
+> Just Download and paste the Matrix.java File
 ## Overview
 
 The `Matrix` class is a generic Java implementation for handling two-dimensional matrices of numeric types. It provides various functionalities, including basic operations like addition, subtraction, multiplication, and transposition. The class is designed to support any subclass of `Number`, such as `Integer`, `Double`, `Float`, and `Long`.
